@@ -1,4 +1,4 @@
-package logParser.query;
+package com.denisov26.solution.logParser.query;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package logParser;
+package com.denisov26.solution.logParser;
 
 public enum Event {
     LOGIN,

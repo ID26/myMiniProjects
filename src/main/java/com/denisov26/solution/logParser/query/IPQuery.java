@@ -1,7 +1,7 @@
-package logParser.query;
+package com.denisov26.solution.logParser.query;
 
-import logParser.Event;
-import logParser.Status;
+import com.denisov26.solution.logParser.Event;
+import com.denisov26.solution.logParser.Status;
 
 import java.util.Date;
 import java.util.Set;

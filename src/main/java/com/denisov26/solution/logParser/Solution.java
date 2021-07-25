@@ -1,4 +1,4 @@
-package logParser;
+package com.denisov26.solution.logParser;
 
 import java.nio.file.Paths;
 import java.util.Date;
