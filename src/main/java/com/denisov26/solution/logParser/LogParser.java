@@ -1,7 +1,6 @@
 package com.denisov26.solution.logParser;
 
 import com.denisov26.solution.logParser.query.*;
-import com.denisov26.solutipn.logParser.query.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
