@@ -1,16 +1,23 @@
 package com.denisov26.solution.cashmachine.command;
 
-import com.javarush.task.task26.task2613.ConsoleHelper;
-import com.javarush.task.task26.task2613.exception.InterruptOperationException;
+
+import com.denisov26.solution.cashmachine.CashMachine;
+import com.denisov26.solution.cashmachine.ConsoleHelper;
+import com.denisov26.solution.cashmachine.exception.InterruptOperationException;
+
+import java.util.ResourceBundle;
 
 class ExitCommand implements Command {
+    private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "exit");
 
     @Override
     public void execute() throws InterruptOperationException {
-        ConsoleHelper.writeMessage("Are you wont exit? Press \"y\" or \"n\"");
+        ConsoleHelper.writeMessage(res.getString("exit.question.y.n"));
         String command = ConsoleHelper.readString();
-        if (command != null && command.trim().equalsIgnoreCase("y")) {
-            ConsoleHelper.writeMessage("See you later.");
+        if (command != null && "y".equals(command.toLowerCase())) {
+            ConsoleHelper.writeMessage(res.getString("thank.message"));
+        } else {
+
         }
     }
 }

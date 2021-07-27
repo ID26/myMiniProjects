@@ -1,14 +1,19 @@
 package com.denisov26.solution.cashmachine.command;
 
-import com.javarush.task.task26.task2613.ConsoleHelper;
-import com.javarush.task.task26.task2613.CurrencyManipulator;
-import com.javarush.task.task26.task2613.CurrencyManipulatorFactory;
+import com.denisov26.solution.cashmachine.CashMachine;
+import com.denisov26.solution.cashmachine.ConsoleHelper;
+import com.denisov26.solution.cashmachine.CurrencyManipulator;
+import com.denisov26.solution.cashmachine.CurrencyManipulatorFactory;
+
+import java.util.ResourceBundle;
 
 class InfoCommand implements Command {
 
+    private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "info");
+
     @Override
     public void execute() {
-        ConsoleHelper.writeMessage("Information:");
+        ConsoleHelper.writeMessage(res.getString("before"));
         boolean hasMoney = false;
         for (CurrencyManipulator manipulator : CurrencyManipulatorFactory.getAllCurrencyManipulators()) {
             if (manipulator.hasMoney()) {
@@ -18,7 +23,7 @@ class InfoCommand implements Command {
         }
 
         if (!hasMoney) {
-            ConsoleHelper.writeMessage("No money available.");
+            ConsoleHelper.writeMessage(res.getString("no.money"));
         }
     }
 }

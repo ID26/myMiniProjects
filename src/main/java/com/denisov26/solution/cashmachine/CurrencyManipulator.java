@@ -1,6 +1,6 @@
 package com.denisov26.solution.cashmachine;
 
-import com.javarush.task.task26.task2613.exception.NotEnoughMoneyException;
+import com.denisov26.solution.cashmachine.exception.NotEnoughMoneyException;
 
 import java.util.*;
 

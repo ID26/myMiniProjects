@@ -1,22 +1,25 @@
 package com.denisov26.solution.cashmachine;
 
-import com.javarush.task.task26.task2613.command.CommandExecutor;
-import com.javarush.task.task26.task2613.exception.InterruptOperationException;
+import com.denisov26.solution.cashmachine.command.CommandExecutor;
+import com.denisov26.solution.cashmachine.exception.InterruptOperationException;
+
 
 import java.util.Locale;
 
 public class CashMachine {
+    public static final String RESOURCE_PATH = CashMachine.class.getPackage().getName() + ".resources.";
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.ENGLISH);
         try {
-            com.javarush.task.task26.task2613.Operation operation;
+            Operation operation = Operation.LOGIN;
+            CommandExecutor.execute(operation);
             do {
-                operation = com.javarush.task.task26.task2613.ConsoleHelper.askOperation();
+                operation = ConsoleHelper.askOperation();
                 CommandExecutor.execute(operation);
-            } while (operation != com.javarush.task.task26.task2613.Operation.EXIT);
+            } while (operation != Operation.EXIT);
         } catch (InterruptOperationException ignored) {
-            com.javarush.task.task26.task2613.ConsoleHelper.writeMessage("Terminated. Thank you for visiting JavaRush cash machine. Good luck.");
+            ConsoleHelper.printExitMessage();
         }
     }
 }
