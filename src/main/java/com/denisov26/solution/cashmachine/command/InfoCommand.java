@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
 
 class InfoCommand implements Command {
 
-    private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "info");
+    private ResourceBundle res = ResourceBundle.getBundle(/*CashMachine.RESOURCE_PATH + */"info");
 
     @Override
     public void execute() {

@@ -8,7 +8,7 @@ import com.denisov26.solution.cashmachine.exception.InterruptOperationException;
 import java.util.ResourceBundle;
 
 class ExitCommand implements Command {
-    private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "exit");
+    private ResourceBundle res = ResourceBundle.getBundle(/*CashMachine.RESOURCE_PATH + */"exit");
 
     @Override
     public void execute() throws InterruptOperationException {

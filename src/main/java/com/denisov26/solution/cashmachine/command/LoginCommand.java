@@ -10,8 +10,9 @@ import java.util.regex.Pattern;
 
 public class LoginCommand implements Command {
 
-    private ResourceBundle validCreditCards = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "verifiedCards");
-    private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "login");
+    private ResourceBundle validCreditCards = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "verifiedCards"
+            /*"resources.verifiedCards"*/);
+    private ResourceBundle res = ResourceBundle.getBundle(/*CashMachine.RESOURCE_PATH + */"login");
 
     @Override
     public void execute() throws InterruptOperationException {

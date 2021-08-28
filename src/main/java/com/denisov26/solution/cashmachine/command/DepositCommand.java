@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 
 class DepositCommand implements Command {
-    private ResourceBundle res = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "deposit");
+    private final ResourceBundle res = ResourceBundle.getBundle(/*CashMachine.RESOURCE_PATH + */"deposit");
 
 
     @Override
